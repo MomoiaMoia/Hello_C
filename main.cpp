@@ -1,11 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <random>
+#include "sqlist.h"
 
-void butler(void);
 int main(void) {
-	printf("* I will call butler;\n");
-	butler();
-	printf("* Finish;\n");
+
+	SeqList L;
+	srand(time(NULL));
+
+	InitList(L);
+	for (int i = 0; i < 30; i++) {
+		int randomInt = rand() % 100 + 1;
+		ListInsert(L, i, randomInt);
+	}
+	ListTravel(L);
+
+
+	ReverseList(L);
+	ListTravel(L);
 }
-void butler(void) {
-	printf("\t- This is butler;\n");
-}
+
+

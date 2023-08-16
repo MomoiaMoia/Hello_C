@@ -1,0 +1,1 @@
+astr = input("$_________\b\b\b\b\b\b\b\b\b")
